@@ -1,77 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: brown;
-    align-items: center;
-
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: brown;
+  align-items: center;
 }
 
-.board{
-    display: flex;
-    justify-content: center;
-    min-height: 50vh;
-    gap: 20px;
+.board {
+  display: flex;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 20px;
 }
 
-.column{
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: -5px -5px 10px black;
-    background-color: aliceblue;
-    width: 300px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.column {
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: -5px -5px 10px black;
+  background-color: aliceblue;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.tasks{
-    min-height: 300px;
-    /* border: 2px solid black; */
-    width: 100%;
+.tasks {
+  min-height: 300px;
+  /* border: 2px solid black; */
+  width: 100%;
 }
 
-.column input{
-    width: 100%;
-    font-size: large;
-    padding: 10px;
-    margin-top: 10px;
-    font-weight: bold;
+.column input {
+  width: 100%;
+  font-size: large;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.column button{
-    width: 100%;
-    font-size: 18px;
-    padding: 5px;
-    background-color: aqua;
-    border: none;
-    font-weight: bold;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease ;
-    &:hover{
-        color: red;
-        box-shadow: 0 0 5px black;
-    }
+.column button {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+  background-color: aqua;
+  border: none;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    color: red;
+    box-shadow: 0 0 5px black;
+  }
 }
 
-ul li{
-    list-style-type: none;
-    border: 1.9px solid gainsboro;
-    padding: 10px 5px;
-    margin: 10px 0;
-    background-color:azure;
-    border-radius: 10px;
-    
-    &:hover{
-        background-color:rgba(240, 255, 255, 0.227);
-    }
+ul li {
+  list-style-type: none;
+  border: 1.9px solid gainsboro;
+  padding: 10px 5px;
+  margin: 10px 0;
+  background-color: azure;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(240, 255, 255, 0.227);
+  }
 }
