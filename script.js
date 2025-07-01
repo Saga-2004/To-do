@@ -1,5 +1,4 @@
-const { createElement } = require("react");
-
+let draggedCard = null;
 function addTask(coluumnId){
     const input = document.getElementById(`${coluumnId}-input`);
     // console.log(input);
@@ -21,5 +20,30 @@ function createtaskElement(taskText){
     takeElement.innerText = taskText;
     takeElement.classList.add("card")
     
+    // takeElement.setAttribute("draggable",true) //OR 
+    takeElement.draggable = true;
+
+    takeElement.addEventListener("dragstart", dragStart)
+    takeElement.addEventListener("dragend",dragEnd)
+
     return takeElement
+}
+
+function dragStart(){
+    this.classList.add("dragging");
+    draggedCard = this;
+}
+
+function dragEnd(){
+   this.classList.remove("dragging");
+}
+
+const columns = document.querySelectorAll(".column > ul.tasks");
+columns.forEach((column)=>{
+    column.addEventListener("dragover",dragOver)
+})
+
+function dragOver(e){
+    e.preventDefault();
+    this.appendChild(draggedCard);  
 }
